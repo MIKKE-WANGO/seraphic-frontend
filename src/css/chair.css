@@ -1,0 +1,78 @@
+
+.sitcovers{
+    padding-left: 10px;
+    width: 100%;
+}
+
+.sitcovers button{
+    width: 40%;
+    border: none;
+    height: 35px;
+    color: white;
+    background-color: #a11212;
+
+    cursor: pointer;
+    font-weight:500;
+
+}
+.sitcover{
+    width: 100%;
+    
+    display: none;
+}
+.sitcover p{
+    width: 100%;
+}
+.show{
+    
+    display: inline-flex;
+    align-content: space-around;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.sitcover-child{
+    background-color: white;
+    display: block;
+    width: 45%;
+    margin-bottom: 10px;
+    position: relative;
+    margin-top: 10px;
+}
+
+
+.sitcover-child img{
+    width: 100%;
+    height:150px
+}
+
+.sitcover-name{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 1px;
+}
+
+.sitcover-price{
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.sitcover-child button{
+    margin-top: 5px;
+    border-radius: 3px;
+    border: none;
+    background-color: #a11212;
+    width: 65px;
+    height:25px;
+    color:white;
+    cursor: pointer;
+
+}
+
+
+@media(max-width: 500px){
+    .sitcovers button{
+        width: 80%;
+    }
+
+}

@@ -1,0 +1,111 @@
+.login{
+    width: 100%;
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 120px;
+   
+}
+.login-outer{
+    min-height: 500px;
+    background-color: rgb(249, 249, 249);
+}
+.login-inner{
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 30px;
+}
+
+
+.login input{
+    display: block;
+}
+hr{
+    height: 0.5px;
+    background-color:#e6ae48;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+label{
+    color: #818181;
+    font-size: 13px;
+    padding-top: 15px;
+    
+}
+.login p{
+    color: #a11212;
+}
+.login input{
+    margin-top: 7px;
+    margin-bottom: 15px;
+    width: 100%;
+    height:35px
+}
+
+.new{
+    color: #818181;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.login a{
+    color:  #818181;;
+    display: block;
+    font-size: 14px;
+}
+
+.login a:hover{
+    color: rgb(52, 50, 50);
+}
+
+.login button{
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border: 0px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+    
+}
+
+.log{
+    background-color: #e6ae48;
+}
+
+.login button:hover{
+    background-color: #a11212;
+    color:aliceblue
+}
+
+.login a button{
+    background-color: white;
+    border: 1px solid black;
+    font-size: 14px;
+}
+
+.login a button:hover{
+    background-color: #ebebeb;
+    color: black;
+}
+
+.forget{
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+@media(max-width: 900px){
+    .login-inner{
+        width: 90%;
+        padding: 20px;
+    }
+    .login{
+        margin-top: 80px;
+    }
+}

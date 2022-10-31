@@ -1,0 +1,91 @@
+.steps{
+    margin-top: 90px;
+    color: black;
+    width: 100%;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.circle {
+    width:50px;
+    height:75px;
+    position: relative;
+    text-align: center;
+    
+    z-index: 0;
+ }
+.circle a{
+    color: #a11212;
+}
+.circle a:hover{
+    color: #e6ae48;
+}
+ .inner-circle{
+    width:50px;
+    height:50px;
+    border-radius:100%;
+    background-color:#d5d5d5; 
+    background-color: #a11212;
+    z-index: 0;
+    text-align: center;
+ }
+
+ .inner-circle img{
+    width: 30px;
+    height: 30px;
+    padding: 10px 0;
+ }
+
+ .step-label{
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    z-index: 0;
+    font-size: 12px;
+ }
+ 
+ .line {
+    margin-top:20px;
+    width:10%;
+    display: flex;
+    flex-shrink: 1;
+    height:4px;
+    background-color: #a11212;
+    float:left;
+    z-index: 0;
+ }
+
+ .active{
+    background-color: #e6ae48;
+    color: #e6ae48;
+
+ }
+
+ 
+@media(max-width: 400px){
+    .inner-circle{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .inner-circle img{
+        width: 20px;
+        height: 20px;
+        padding: 5px 0;
+    }
+    .circle{
+        width: 30px;
+        height: 55px;
+    }
+    .line{
+        margin-top: 13px;
+    }
+    .step-label{
+        left: 1px;
+    }
+    .steps{
+        margin-top: 90px;
+    }
+}
