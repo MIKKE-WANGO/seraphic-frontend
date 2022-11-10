@@ -15,7 +15,7 @@ const Lighting = () => {
       }, []);
     
     async function getProducts(category) {
-        let response = await fetch('https://seraphic-wango.herokuapp.com/quotation/products', {
+        let response = await fetch('https://seraphic-0kq8.onrender.com/quotation/products', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ const Lighting = () => {
                       
         <div className='col-child' key={product.id}>
           <Link to={`/decor/${product.id}`}>
-            <img src={`https://res.cloudinary.com/dgcbtjq3c/${product.image}`}  alt={product.name}/>
+            <img src={`https://res.cloudinary.com/dywxtjhkl/${product.image}`}  alt={product.name}/>
             
             <p className='pname'>{product.name}</p>
             <p className='pprice'>{product.price} ksh</p>

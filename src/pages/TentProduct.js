@@ -44,7 +44,7 @@ const TentProduct = (props) => {
   }, [draping,capacity,usedraping,recommendedNoTents]);
 
   async function getTent() {
-      let response = await fetch(`https://seraphic-wango.herokuapp.com/quotation/tent/${tentId.id}`, {
+      let response = await fetch(`https://seraphic-0kq8.onrender.com/quotation/tent/${tentId.id}`, {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ const TentProduct = (props) => {
   }
 
   async function getbudget() {
-    let response = await fetch(`https://seraphic-wango.herokuapp.com/quotation/budget`, {
+    let response = await fetch(`https://seraphic-0kq8.onrender.com/quotation/budget`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ const TentProduct = (props) => {
   }
 
   async function AddToEvent(id,quantity) {
-    let response = await fetch(`https://seraphic-wango.herokuapp.com/quotation/addeventproduct`, {
+    let response = await fetch(`https://seraphic-0kq8.onrender.com/quotation/addeventproduct`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -198,7 +198,7 @@ const TentProduct = (props) => {
 
       <div className='product'>
         <div className='product-images'>               
-          <img src={`https://res.cloudinary.com/dgcbtjq3c/${tent.image}`}  alt={tent.name}/> 
+          <img src={`https://res.cloudinary.com/dywxtjhkl/${tent.image}`}  alt={tent.name}/> 
 
         </div>
 

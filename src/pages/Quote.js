@@ -22,7 +22,7 @@ const Quote = (props) => {
 
   
   async function getEventProducts() {
-    let response = await fetch(`https://seraphic-wango.herokuapp.com/quotation/quote-view`, {
+    let response = await fetch(`https://seraphic-0kq8.onrender.com/quotation/quote-view`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

@@ -82,7 +82,7 @@ import Navbar from '../components/Navbar';
 
   async function  RequestCode  (email)  {
     //retrieve refresh and access
-    let response = await fetch('https://seraphic-wango.herokuapp.com/quotation/request-reset-code', {
+    let response = await fetch('https://seraphic-0kq8.onrender.com/quotation/request-reset-code', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -101,7 +101,7 @@ import Navbar from '../components/Navbar';
 
   async function  TestCode  (code,email)  {
     //retrieve refresh and access
-    let response = await fetch('https://seraphic-wango.herokuapp.com/quotation/test-code', {
+    let response = await fetch('https://seraphic-0kq8.onrender.com/quotation/test-code', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -130,7 +130,7 @@ import Navbar from '../components/Navbar';
 
   async function  ResetPassword  (code,email,password)  {
     //retrieve refresh and access
-    let response = await fetch('https://seraphic-wango.herokuapp.com/quotation/reset-password', {
+    let response = await fetch('https://seraphic-0kq8.onrender.com/quotation/reset-password', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

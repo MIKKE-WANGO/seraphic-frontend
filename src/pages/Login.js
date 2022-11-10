@@ -54,7 +54,7 @@ const Login = () => {
 
   async function  Loginuser  (formData)  {
     //retrieve refresh and access
-    let response = await fetch('https://seraphic-wango.herokuapp.com/api/token/', {
+    let response = await fetch('https://seraphic-0kq8.onrender.com/api/token/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ const Login = () => {
 
   const get_user = async () => {
     if (localStorage.getItem('access')){
-      let response = await fetch('https://seraphic-wango.herokuapp.com/quotation/user-details', {
+      let response = await fetch('https://seraphic-0kq8.onrender.com/quotation/user-details', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',            

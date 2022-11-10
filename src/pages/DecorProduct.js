@@ -27,7 +27,7 @@ const DecorProduct = (props) => {
     }, [decorId]);
 
     async function getDecor() {
-        let response = await fetch(`https://seraphic-wango.herokuapp.com/quotation/decor/${decorId.id}`, {
+        let response = await fetch(`https://seraphic-0kq8.onrender.com/quotation/decor/${decorId.id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ const DecorProduct = (props) => {
     }
 
     async function getbudget() {
-        let response = await fetch(`https://seraphic-wango.herokuapp.com/quotation/budget`, {
+        let response = await fetch(`https://seraphic-0kq8.onrender.com/quotation/budget`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ const DecorProduct = (props) => {
       }
 
       async function AddToEvent(id,quantity) {
-        let response = await fetch(`https://seraphic-wango.herokuapp.com/quotation/addeventproduct`, {
+        let response = await fetch(`https://seraphic-0kq8.onrender.com/quotation/addeventproduct`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -119,7 +119,7 @@ const DecorProduct = (props) => {
     <Steps active='decor'/>
     <div className='product'>
       <div className='product-images'>               
-        <img src={`https://res.cloudinary.com/dgcbtjq3c/${decor.image}`}  alt={decor.name}/> 
+        <img src={`https://res.cloudinary.com/dywxtjhkl/${decor.image}`}  alt={decor.name}/> 
 
       </div>
 

@@ -43,7 +43,7 @@ const ChairProduct = (props) => {
     
     
     async function getChair() {
-        let response = await fetch(`https://seraphic-wango.herokuapp.com/quotation/chair/${chairId.id}`, {
+        let response = await fetch(`https://seraphic-0kq8.onrender.com/quotation/chair/${chairId.id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ const ChairProduct = (props) => {
     }
   
     async function getbudget() {
-      let response = await fetch(`https://seraphic-wango.herokuapp.com/quotation/budget`, {
+      let response = await fetch(`https://seraphic-0kq8.onrender.com/quotation/budget`, {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',
@@ -78,7 +78,7 @@ const ChairProduct = (props) => {
     }
   
     async function AddToEvent(id,quantity) {
-      let response = await fetch(`https://seraphic-wango.herokuapp.com/quotation/addeventproduct`, {
+      let response = await fetch(`https://seraphic-0kq8.onrender.com/quotation/addeventproduct`, {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
@@ -214,7 +214,7 @@ const ChairProduct = (props) => {
       <Steps active='chairs'/>
       <div className='product'>
         <div className='product-images'>               
-          <img src={`https://res.cloudinary.com/dgcbtjq3c/${chair.image}`}  alt={chair.name}/> 
+          <img src={`https://res.cloudinary.com/dywxtjhkl/${chair.image}`}  alt={chair.name}/> 
 
         </div>
 
@@ -236,7 +236,7 @@ const ChairProduct = (props) => {
                         
                     <div className='sitcover-child' key={sitcover.id}>
                     
-                        <img src={`https://res.cloudinary.com/dgcbtjq3c/${sitcover.image}`}  alt={sitcover.name}/>
+                        <img src={`https://res.cloudinary.com/dywxtjhkl/${sitcover.image}`}  alt={sitcover.name}/>
                         
                         <p className='sitcover-name'>{sitcover.name}</p>
                         <p className='sitcover-price'>{sitcover.price} ksh</p>
@@ -260,7 +260,7 @@ const ChairProduct = (props) => {
                         
                     <div className='sitcover-child' key={sitcover.id}>
                     
-                        <img src={`https://res.cloudinary.com/dgcbtjq3c/${sitcover.image}`}  alt={sitcover.name}/>
+                        <img src={`https://res.cloudinary.com/dywxtjhkl/${sitcover.image}`}  alt={sitcover.name}/>
                         
                         <p className='sitcover-name'>{sitcover.name}</p>
                         <p className='sitcover-price'>{sitcover.price} ksh</p>

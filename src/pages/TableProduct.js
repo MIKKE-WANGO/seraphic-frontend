@@ -41,7 +41,7 @@ const TableProduct = (props) => {
     }, [chosenTablecloth,chosenOverlay,]);
  
     async function getTable() {
-        let response = await fetch(`https://seraphic-wango.herokuapp.com/quotation/table/${tableId.id}`, {
+        let response = await fetch(`https://seraphic-0kq8.onrender.com/quotation/table/${tableId.id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ const TableProduct = (props) => {
     }
   
     async function getbudget(name) {
-      let response = await fetch(`https://seraphic-wango.herokuapp.com/quotation/budget`, {
+      let response = await fetch(`https://seraphic-0kq8.onrender.com/quotation/budget`, {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ const TableProduct = (props) => {
     }
   
     async function AddToEvent(id,quantity) {
-      let response = await fetch(`https://seraphic-wango.herokuapp.com/quotation/addeventproduct`, {
+      let response = await fetch(`https://seraphic-0kq8.onrender.com/quotation/addeventproduct`, {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
@@ -219,7 +219,7 @@ const TableProduct = (props) => {
       <Steps active='tables'/>
       <div className='product'>
         <div className='product-images'>               
-          <img src={`https://res.cloudinary.com/dgcbtjq3c/${table.image}`}  alt={table.name}/> 
+          <img src={`https://res.cloudinary.com/dywxtjhkl/${table.image}`}  alt={table.name}/> 
 
         </div>
 
@@ -241,7 +241,7 @@ const TableProduct = (props) => {
                         
                     <div className='sitcover-child' key={tablecloth.id}>
                     
-                        <img src={`https://res.cloudinary.com/dgcbtjq3c/${tablecloth.image}`}  alt={tablecloth.name}/>
+                        <img src={`https://res.cloudinary.com/dywxtjhkl/${tablecloth.image}`}  alt={tablecloth.name}/>
                         
                         <p className='sitcover-name'>{tablecloth.name}</p>
                         <p className='sitcover-price'>{tablecloth.price} ksh</p>
@@ -262,7 +262,7 @@ const TableProduct = (props) => {
                         
                     <div className='sitcover-child' key={overlay.id}>
                     
-                        <img src={`https://res.cloudinary.com/dgcbtjq3c/${overlay.image}`}  alt={overlay.name}/>
+                        <img src={`https://res.cloudinary.com/dywxtjhkl/${overlay.image}`}  alt={overlay.name}/>
                         
                         <p className='sitcover-name'>{overlay.name}</p>
                         <p className='sitcover-price'>{overlay.price} ksh</p>

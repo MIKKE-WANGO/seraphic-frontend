@@ -22,7 +22,7 @@ const Navbar = (props) => {
   async function  Verify  ()  {
     //retrieve refresh and access
     if (localStorage.getItem('access')){
-      let response = await fetch('https://seraphic-wango.herokuapp.com/api/token/verify', {
+      let response = await fetch('https://seraphic-0kq8.onrender.com/api/token/verify', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',        

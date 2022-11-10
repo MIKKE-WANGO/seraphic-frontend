@@ -54,7 +54,7 @@ const Start = () => {
 
   async function  checkIfEventExists  ()  {
     if(localStorage.getItem('access')){
-      let response = await fetch('https://seraphic-wango.herokuapp.com/quotation/event', {
+      let response = await fetch('https://seraphic-0kq8.onrender.com/quotation/event', {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ const Start = () => {
 
   async function  CreateEvent(){
     //retrieve refresh and access
-    let response = await fetch('https://seraphic-wango.herokuapp.com/quotation/event', {
+    let response = await fetch('https://seraphic-0kq8.onrender.com/quotation/event', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

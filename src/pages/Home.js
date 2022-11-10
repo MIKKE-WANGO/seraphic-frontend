@@ -40,7 +40,7 @@ const Home = () => {
   
   async function  checkIfEventExists  ()  {
     if(localStorage.getItem('access')){
-      let response = await fetch('https://seraphic-wango.herokuapp.com/quotation/event', {
+      let response = await fetch('https://seraphic-0kq8.onrender.com/quotation/event', {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ const Home = () => {
   
   async function  getQuotations ()  {
     if(localStorage.getItem('access')){
-      let response = await fetch('https://seraphic-wango.herokuapp.com/quotation/get-quotations-list', {
+      let response = await fetch('https://seraphic-0kq8.onrender.com/quotation/get-quotations-list', {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',
@@ -95,7 +95,7 @@ const Home = () => {
 
   async function  createQuote  ()  {
     if(localStorage.getItem('access')){
-      let response = await fetch('https://seraphic-wango.herokuapp.com/quotation/delete-event', {
+      let response = await fetch('https://seraphic-0kq8.onrender.com/quotation/delete-event', {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',

@@ -34,7 +34,7 @@ useEffect(() => {
 
 
   async function getEventProducts() {
-    let response = await fetch(`https://seraphic-wango.herokuapp.com/quotation/review`, {
+    let response = await fetch(`https://seraphic-0kq8.onrender.com/quotation/review`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -43,6 +43,9 @@ useEffect(() => {
             
         },     
     });
+    if(!response.ok){
+      return toast.error("Login to see your review");
+    }
     let data = await response.json();   
     setEventProducts(data.event_products)
     setEventPrice(data.total_price)
@@ -50,7 +53,7 @@ useEffect(() => {
   }
 
   async function getbudget() {
-    let response = await fetch(`https://seraphic-wango.herokuapp.com/quotation/budget`, {
+    let response = await fetch(`https://seraphic-0kq8.onrender.com/quotation/budget`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -59,6 +62,10 @@ useEffect(() => {
         },     
 
     });
+    
+    if(!response.ok){
+      return toast.error("Login to see your review");
+    }
     let data = await response.json();
     setGuests(data.guests)   
     setMoneyLeft(data.money_left)   
@@ -68,7 +75,7 @@ useEffect(() => {
 
   
   async function DeletProduct(id) {
-    let response = await fetch(`https://seraphic-wango.herokuapp.com/quotation/review`, {
+    let response = await fetch(`https://seraphic-0kq8.onrender.com/quotation/review`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -80,7 +87,7 @@ useEffect(() => {
     });
     let data = await response.json();
     if(!response.ok){
-      toast.error("Unable to remove item try again later");
+      return toast.error("Unable to remove item try again later");
     }
     if(data.success === 'deleted successfully'){  
       getEventProducts()
@@ -91,7 +98,7 @@ useEffect(() => {
 
   
   async function SubmitQuote() {
-    let response = await fetch(`https://seraphic-wango.herokuapp.com/quotation/submit-quote`, {
+    let response = await fetch(`https://seraphic-0kq8.onrender.com/quotation/submit-quote`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -102,7 +109,7 @@ useEffect(() => {
     });
     let data = await response.json();
     if(!response.ok){
-      toast.error("Unable to remove item try again later");
+      return toast.error("Unable to remove item try again later");
     }
     if(data.success === 'Submitted successfully'){  
       

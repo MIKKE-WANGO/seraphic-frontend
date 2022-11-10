@@ -15,6 +15,7 @@ const Register = () => {
     name:'',
     email: '',
     password: '',
+    phone: ''
   })
 
   const [accountCreated, setAccountCreated] = useState(false)
@@ -25,7 +26,7 @@ const Register = () => {
   },[accountCreated])
 
   //destructure to access formData keys  individually
-  const {name,email, password} = formData
+  const {name,email, password,phone} = formData
 
   let navigate = useNavigate()
 
@@ -50,7 +51,7 @@ const Register = () => {
 
   const get_user = async () => {
     if (localStorage.getItem('access')){
-      let response = await fetch('https://seraphic-wango.herokuapp.com/quotation/user-details', {
+      let response = await fetch('https://seraphic-0kq8.onrender.com/quotation/user-details', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',            
@@ -62,7 +63,7 @@ const Register = () => {
       let data = await response.json()
  
       if(!response.ok){
-        console.log("unable to get user")     
+        return console.log("unable to get user ")     
       }
 
       localStorage.setItem('username', data.user.name)
@@ -80,7 +81,7 @@ const Register = () => {
 
   async function  Loginuser  ()  {
     //retrieve refresh and access
-    let response = await fetch('https://seraphic-wango.herokuapp.com/api/token/', {
+    let response = await fetch('https://seraphic-0kq8.onrender.com/api/token/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -108,7 +109,7 @@ const Register = () => {
   
   const signup= async  (formData) => {
   
-    let response = await fetch('https://seraphic-wango.herokuapp.com/quotation/register', {
+    let response = await fetch('https://seraphic-0kq8.onrender.com/quotation/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -128,7 +129,7 @@ const Register = () => {
         return console.log('user already exists')    
     
       } else if(data.error==='Password must be at least 6 characters long'){
-        toast.error("Password must be at least 6 characters long");
+        return toast.error("Password must be at least 6 characters long");
   
       } 
         
@@ -165,6 +166,14 @@ const Register = () => {
                 type="email"
                 value={email}
                 onChange={e => onChange(e)}                        
+                />
+
+              <label for='phone'>Mobile Number</label>
+                <input  
+                name="phone" 
+                type="number"
+                value={phone}
+                onChange={e => onChange(e)} 
                 />
              
                 <label for='password'>Password</label>
